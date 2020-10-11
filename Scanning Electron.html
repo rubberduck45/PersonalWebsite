@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+		<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<title>Rohil Parikh</title>
+	</head>
+
+	<body>
+		<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+			<ul class="pure-menu-list">
+					<li class="pure-menu-item"><a href="home.html" class="pure-menu-link">Home</a></li>
+					<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+							<a href="#" id="Projectlink" class="pure-menu-link">Projects</a>
+							<ul class="pure-menu-children">
+									<li class="pure-menu-item pure-menu-selected"><a href="Scanning Electron.html" class="pure-menu-link">Scanning Electron Microscope (SEM)</a></li>
+									<li class="pure-menu-item"><a href="code.html" class="pure-menu-link">Code</a></li>
+									<li class="pure-menu-item"><a href="hydro.html" class="pure-menu-link">Semi-Automated Hydroponics System</a></li>
+									<li class="pure-menu-item"><a href="3dprinter.html" class="pure-menu-link">3D Printer</a></li>
+							</ul>
+					</li>
+					<li class="pure-menu-item"><a href="links.html" class="pure-menu-link">Useful Resources</a></li>
+	        <li class="pure-menu-item"><a href="contact.html" class="pure-menu-link">Contact</a></li>
+	    </ul>
+		</div>
+
+		<div class="pure-g">
+				<div class="pure-u-1-1">
+					<div class="l-box header">
+						<img class="headshot pure-img" src="images/SEM.png" alt="SEM main consle">
+		      	<h1 class="splash-head">Scanning Electron Microscope (SEM)</h1>
+						<hr class="homehr">
+		      	<p class="splash-subhead">
+								On January 7th, 2020, my friend and I were able to purchase a JEOL JSM-6400 from UCSD surplus. Since then we have been working on
+								getting it up and running. Below you can see some pictures of our scope, some guides for maintaining/fixing scanning electron microscopes
+								and some of the modifications we made to take advantage of our scope.
+						<br>
+						<br>
+						Background Information: Scanning Electron Microscopes (SEMs) use electrons to view a sample. When electrons are accelerated at a high speed, they have a
+						wavelength shorter than visible light allowing for nanometer resolution. The column of the SEM contains an optical system (lenses, apertures) used to focus
+						the electron beam onto the sample. The most common way to view an image is to use the secondary electrons, electrons dislodged from the sample by the incoming
+						beam, to generate an image. If you want to learn more about SEMs
+						<a href="https://www.jeol.co.jp/en/applications/pdf/sm/sem_atoz_all.pdf"target="_blank" rel="noopener noreferrer">
+							JEOL's  Scanning Electron Microscope A To Z</a>
+							is a great introductory resource.
+						</p>
+						<br>
+						<div class="pure-button-group SEMbuttons" role="group" aria-label="...">
+    					<button class="pure-button pure-button-primary"  onclick="showImages()">Images</button>
+    					<button class="pure-button pure-button-primary" onclick="showGuides()">Guides</button>
+    					<button class="pure-button pure-button-primary" onclick="showMods()">Modifications</button>
+						</div>
+						<div class="pure-g SEMimages" id="SEMimages">
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/Column.png" alt="Column"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/SpecimenStage.jpg" alt="Specimen Stage"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/Open Console.png" alt="Console"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/FaradayCage.jpg" alt="Inside column"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/wehnelt cap.png" alt="Wehnelt Cap"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/Pic1.png" alt="SEM image"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/Pic2.jpg" alt="SEM image"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/Pic3.jpg" alt="SEM image"></div>
+						</div>
+						<div class="pure-g">
+							<div class="pure-g SEMguides" id="SEMguides" style="display: none">
+								  <button class="guidebtn guidetab active" onclick="openDoc(event,'OL')">OL Aperture removal/disassembly</button>
+								  <button class="guidebtn guidetab" onclick="openDoc(event,'Col')">Opening Column</button>
+							</div>
+							<div id="OL" class="pure-g guides" style="display: none">
+								<div class="pure-u-1 guide">
+									<p><strong> OL Aperture removal/disassembly</strong></p>
+									<p>Before beginning make sure to review page 373 in the manual</p>
+									<p>(MAINTENANCE - 5. Replacement of objective aperture)</p>
+									<p><strong>REMOVAL</strong></p>
+									<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>Things to know:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+									<ol>
+									<li>Once the screws are loosened the aperture will tilt upwards. Make sure to hold to aperture firmly in place while undoing the screws</li>
+									<li>The aperture is placed between the PCD (below) and the condenser lens (above) so it must come out as straight as possible</li>
+									<li>There is a small pin and metal cylinder that will guide the aperture out. Pay attention to the metal cylinder as once it has slid out there is no more guiding.</li>
+									<img class="pure-img" src="images/OLimage1.jpg" alt="OL guide photo" style="width: 353.50px; height: 265.59px;">
+									<li>Remove the two screws affixing the aperture to the column</li>
+									<img class="pure-img" src="images/OLimage2.jpg" alt="OL guide photo" style="width: 353.50px; height: 267.29px;">
+									<li>Slide out carefully and straight. It may help to provide slight upward pressure to get yourself started. It also may help to brace your arm against the top of the specimen chamber. Good luck!</li>
+									</ol>
+									<p><strong>DISASSEMBLY </strong></p>
+									<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NOTE: You can do this procedure while the aperture is in the microscope as long as you are careful to not rotate or jostle the aperture assembly</strong></p>
+									<ol>
+									<li>Put on gloves</li>
+									<li>Remove the aperture plate (with foil and spring leaf attached) using the two screws (Screw B) which connect the aperture plate and clutch assembly</li>
+									<ol>
+									<li>Touch the aperture plate assembly and screws as little as possible and place somewhere safe</li>
+									</ol>
+									</ol>
+									<img class="pure-img" src="images/OLimage3.png" alt="OL guide photo" style="width: 452.50px; height: 332.85px;">
+									<p><strong>STEPS TO UNSTICK X-APERTURE KNOB</strong></p>
+									<ol>
+									<li>Remove the x-aperture knob by unscrewing</li>
+									<img class="pure-img" src="images/OLimage4.jpg" alt="OL guide photo" style="width: 218.78px; height: 164.50px;">
+									<img class="pure-img" src="images/OLimage5.png" alt="OL guide photo" style="width: 307.50px; height: 136.36px;">
+									<li>Remove top and side flat head screws (there will be a spring inside each). Place caps to one side noting which belongs to which hole (one is shorter). If the spring pops out leave it with its respective cap.</li>
+									<img class="pure-img" src="images/OLimage6.jpg" alt="OL guide photo" style="width: 178.87px; height: 208.50px;">
+									<img class="pure-img" src="images/OLimage7.jpg" alt="OL guide photo" style="width: 285.50px; height: 214.12px;">
+									<li>Remove the two screws from the top semicircle</li>
+									<ol>
+									<li>Never undo the bottom two screws especially if disassembling with the aperture in the microscope as removing the screws will allow for the aperture assembly to rotate too far</li>
+									<img class="pure-img" src="images/OLimage8.jpg" alt="OL guide photo" style="width: 296.50px; height: 222.74px;">
+									</ol>
+									<li>Remove the upper semicircle along with any remaining springs and the white stopper from the top screw hole</li>
+									<img class="pure-img" src="images/OLimage9.jpg" alt="OL guide photo" style="width: 205.54px; height: 155.50px;">
+									<li>Using a rubber tool push out the metal cylinder (inside the x-aperture hole)</li>
+									<li>Once removed clean and reapply grease (this part does not see high vacuum)</li>
+									<li>Reassemble metal semicircle and all attachments</li>
+									</ol>
+									<p><strong>STEPS TO DISASSEMBLE CLUTCH </strong></p>
+									<ol>
+									<li>Remove screw embedded in y-aperture knob</li>
+									<img class="pure-img" src="images/OLimage10.jpg" alt="OL guide photo" style="width: 345.50px; height: 259.13px;">
+									<li>Remove y-aperture knob by unscrewing</li>
+									<ol>
+									<li>Note the number of turns to unscrew so it can be rescrewed in the same amount</li>
+									<img class="pure-img" src="images/OLimage11.jpg" alt="OL guide photo"  style="width: 358.50px; height: 269.50px;">
+									</ol>
+									<li>Pull on y-aperture knob housing to slide it out (this should require very little force)</li>
+									<ol>
+									<li>There will also be two washers</li>
+									<li>The two set screws on the bottom of removed piece can be used to adjust y-aperture range</li>
+									<img class="pure-img" src="images/OLimage12.jpg" alt="OL guide photo" style="width: 452.50px; height: 339.98px;">
+									</ol>
+									<li>If needed, regrease the two washers</li>
+									<li>Undo the flat head screw on the clutch collar</li>
+									<li>Slide back collar to reveal clutch assembly</li>
+									<img class="pure-img" src="images/OLimage13.png" alt="OL guide photo" style="width: 352.50px; height: 161.25px;">
+									<li>If needed, clean off grease on clutch and regrease</li>
+									<li>If clutch is not working correctly it can be future disassembled by unscrewing the back brass piece allowing for adjustment of the three clutch plates</li>
+									<ol>
+									<li>This procedure is not documented</li>
+									</ol>
+									<li>Reassemble with collar, collar flat head, washers, sliding y-aperture end, y-aperture knob, and y-aperture knob screw</li>
+									<li>If the 0,1,2,3,4 numbers are not showing up well when clutch is moved there is a set screw on the numbers piece to allow for it to be adjusted</li>
+									<img class="pure-img" src="images/OLimage14.jpg" alt="OL guide photo" style="width: 382.50px; height: 286.88px;">
+									</ol>
+								</div>
+							</div>
+							<div id="Col" class="pure-g guides" style="display:none">
+								<div class="pure-u-1 guide">
+									<br>
+									<div>
+										<strong>Opening Column</strong>
+										<br />
+									</div>
+									<ol>
+										<li>
+											Turn on gas and open desiccant.
+										</li>
+										<li>
+											Turn off computer console from OPE switch on the back of the power
+											supply unit (flip down)
+										</li>
+										<li>
+											Flip all vacuum system switches down (off) except for the auto/manual
+											switch which should be flipped up to manual.
+										</li>
+										<li>
+											Turn on the microscope
+										</li>
+										<li>
+											Vent the column by flipping up LV1 switch and V3.
+										</li>
+										<li>
+											Turn off LV1 and V3 then turn off the microscope.
+										</li>
+										<li>
+											Open the column cap and disconnect the blanking wire
+										</li>
+										<li>
+											Clean the stainless steel shaft as it will slide backwards away from
+											the column in to a sleeve. Keep in mind that there is an oring on the
+											column side of the shaft that moves with the shaft and a oring ~1cm on
+											the receiving sleeve that is bore into the sleeve. If the shaft is
+											dirty, then sliding the shaft will push the dirt into the oring.
+										</li>
+										<li>
+											Loosen the screw shown in the picture below the stainless steel tube
+											connected to the column
+										</li>
+										<li>
+											Carefully slide the shaft linearly into its sleeve. It should move
+											without much force. Try to minimize wear on the aforementioned oring.
+										</li>
+										<li>
+											Cove the exposed shaft with foil and the whole it left behind with
+											foil.
+										</li>
+										<li>
+											Close the cap (if not already done)
+											<ol>
+												<li>
+													Either the cap can be taped shut or removed from the hinge.
+													<ol>
+														<li>
+															If the cap is removed, ensure there is sufficient slack
+															in the high tension cable so that it can be set down in
+															a reasonable spot.
+														</li>
+														<li>
+															Lay down foil in the planned set down spot
+														</li>
+														<li>
+															Remove bottom two corner screws of the hinge and set
+															down in the foil.
+														</li>
+													</ol>
+												</li>
+											</ol>
+										</li>
+										<li>
+											Ensure that the two back cables have plenty of slack to reach the
+											columns final resting point. (If the cap is still on make sure that the
+											HT cable has sufficient slack too)
+										</li>
+										<li>
+											The column will either be set down vertically on a hard surface covered
+											in foil or horizontally on a towel/blanket covered in foil.
+										</li>
+										<li>
+											Loosen the four set screws on the condenser lens. Loosening them allows
+											for slight error in the verticality of the when column when removing
+											it.
+										</li>
+										<li>
+											Remove the four screws pointing upwards fixing the two parts of the
+											column together.
+										</li>
+										<li>
+											Lift the heavy column and set it down
+										</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+						<div class="pure-g">
+							<div class="pure-g SEMmods" id="SEMmods" style="display: none">
+								<div class="pure-u-18-24 mods modHeader">
+									<p>As we work to make changes to the machine to collect better images, send commands via the web, and other modifications. Check back here for updates with documentaion about the modification we have made.</p>
+								</div>
+							</div>
+					</div>
+			</div>
+		</div>
+
+		<!--div class="footer">
+				<p>
+					Copyright �2020, Rohil Parikh  || <a href="https://www.privacypolicies.com/generic/">Privacy Policy</a> || Contact: rohilparikh@gmail.com
+				</p>
+		</div-->
+
+		<script src="tabscript.js"></script>
+
+ 	</body>
+</html>

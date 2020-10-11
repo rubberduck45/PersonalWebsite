@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+		<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<title>Rohil Parikh</title>
+	</head>
+
+	<body>
+		<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+			<ul class="pure-menu-list">
+					<li class="pure-menu-item"><a href="home.html" class="pure-menu-link">Home</a></li>
+					<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+							<a href="#" id="Projectlink" class="pure-menu-link">Projects</a>
+							<ul class="pure-menu-children">
+									<li class="pure-menu-item"><a href="Scanning Electron.html" class="pure-menu-link">Scanning Electron Microscope (SEM)</a></li>
+									<li class="pure-menu-item"><a href="code.html" class="pure-menu-link">Code</a></li>
+									<li class="pure-menu-item pure-menu-selected"><a href="hydro.html" class="pure-menu-link">Semi-Automated Hydroponics System</a></li>
+									<li class="pure-menu-item"><a href="3dprinter.html" class="pure-menu-link">3D Printer</a></li>
+							</ul>
+					</li>
+					<li class="pure-menu-item"><a href="links.html" class="pure-menu-link">Useful Resources</a></li>
+	        <li class="pure-menu-item"><a href="contact.html" class="pure-menu-link">Contact</a></li>
+	    </ul>
+		</div>
+
+		<div class="pure-g">
+				<div class="pure-u-1-1">
+					<div class="l-box header">
+						<img class="hydroimg pure-img" src="images/hydro1.jpg" alt="Hydroponics System">
+		      	<h1 class="splash-head">Semi-Automated Hydroponics System</h1>
+						<hr class="homehr">
+		      	<p class="splash-subhead">
+							The hydroponics system allows the user to grow up to nine plants using nine liters of
+							water in the bucket reservoir. The light and aerator will cycle automatically and be on for
+							eight hours a day, and the user can choose any type of liquid fertilizer they like. In
+							addition, there are sensors attached to the Arduino that measure various elements of
+							the environment the plants are growing in, such as the amount of light the plants are
+							receiving, the temperature they are growing in, and the ph level of the water. This data
+							is then sent to Thingspeak for processing and charting, which can then be presented to
+							the user through our website and app. Lastly, we can also provide email alerts to the
+							user about any abnormal data collected by the sensors through the Thingspeak and IFTTT services. The entire system consumes 31W of power and costs an average of 89
+							cents per month to operate given average US electricity rates
+						</p>
+						<br>
+						<div class="pure-button-group SEMbuttons" role="group" aria-label="...">
+    					<button class="pure-button pure-button-primary"  onclick="showImagesHydro()">Images</button>
+    					<button class="pure-button pure-button-primary" onclick="showParts()">Parts List</button>
+    					<button class="pure-button pure-button-primary" onclick="showWeb()">Data</button>
+						</div>
+						<div class="pure-g SEMimages" id="HydroImg">
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/hydro2.png" alt="Hydroponics fully grown"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/hydro3.jpg" alt="Electrical Outlet"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/hydro4.png" alt="Hydroponics starting"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/hydro5.png" alt="Software Diagram"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/hydro6.jpg" alt="Temperature/Humidty Sensor"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/hydro7.jpg" alt="Ph sensor"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/hydro8.jpg" alt="Light sensor"></div>
+							<div class="pure-u-1-2 pure-u-lg-1-4"><img class="pure-img" src="images/hydro9.jpg" alt="Water level sensor"></div>
+						</div>
+						<div class="pure-g">
+							<div class="pure-g partslist" id="HydroParts" style="display: none">
+								<div class="pure-u-1">
+								<table>
+									<tbody>
+										<tr>
+											<td>9 Plant Sites Spots Grow
+												Deep Water Culture Kit
+												System Bubble Tub
+												Hydroponics</td>
+										</tr>
+										<tr>
+											<td>General Hydroponics Fertilizer set</td>
+										</tr>
+										<tr>
+											<td>LED Grow Lights</td>
+										</tr>
+										<tr>
+											<td>Five Star Greenhouse
+												Lettuce Mix</td>
+										</tr>
+										<tr>
+											<td>DHT11 basic
+												temperature-humidity
+												sensor</td>
+										</tr>
+										<tr>
+											<td>Tolako 5v Relay Module</td>
+										</tr>
+										<tr>
+											<td>Gravity: Analog pH
+												Sensor </td>
+										</tr>
+										<tr>
+											<td>Gravity: Photoelectric
+												Water / Liquid Level
+												Sensor</td>
+										</tr>
+										<tr>
+											<td>Gravity: I2C VEML7700
+												Ambient Light Sensor</td>
+										</tr>
+										<tr>
+											<td>PVC parts</td>
+										</tr>
+										<tr>
+											<td>Electrical Outlet</td>
+										</tr>
+										<tr>
+											<td>Electrical Outlet Box</td>
+										</tr>
+										<tr>
+											<td>Extension Cord (2ft)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="pure-g">
+							<div class="pure-g SEMmods" id="HydroWeb" style="display: none">
+								<div class="pure-u-1">
+									<p style="color: #535454;">If the system is currently fuctioning you can see the collected data in the charts below</p>
+								</div>
+								<div class="pure-u-1 hydrodata">
+											<h3 class="tm-block-title">Humidity</h3>
+											<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/718043/charts/1?bgcolor=%23ffffff&color=%23d62020&days=1&dynamic=true&results=30&type=line&yaxis=Humidity"></iframe>
+
+											<h3 class="tm-block-title">Temperature</h3>
+											<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/718043/charts/2?bgcolor=%23ffffff&color=%23d62020&days=1&dynamic=true&results=30&type=line&yaxis=Temperature"></iframe>
+
+											<h3 class="tm-block-title">Light Level</h3>
+											<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/718043/charts/3?bgcolor=%23ffffff&color=%23d62020&days=1&dynamic=true&results=30&type=line&yaxis=Light+Level"></iframe>
+
+											<h3 class="tm-block-title">Water Level</h3>
+											<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/718043/charts/4?bgcolor=%23ffffff&color=%23d62020&days=1&dynamic=true&results=30&type=line&yaxis=Water+Level"></iframe>
+
+											<h3 class="tm-block-title">pH</h3>
+											<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/718043/charts/5?bgcolor=%23ffffff&color=%23d62020&days=1&dynamic=true&results=30&type=line&yaxis=pH"></iframe>
+
+								</div>
+
+								</div>
+							</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+
+		<script src="tabscript.js"></script>
+
+ 	</body>
+</html>

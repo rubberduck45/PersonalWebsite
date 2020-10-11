@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+		<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<title>Rohil Parikh</title>
+	</head>
+
+	<body>
+		<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+			<ul class="pure-menu-list">
+					<li class="pure-menu-item pure-menu-selected"><a href="home.html" class="pure-menu-link">Home</a></li>
+					<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+							<a href="#" id="Projectlink" class="pure-menu-link">Projects</a>
+							<ul class="pure-menu-children">
+									<li class="pure-menu-item"><a href="Scanning Electron.html" class="pure-menu-link">Scanning Electron Microscope (SEM)</a></li>
+									<li class="pure-menu-item"><a href="code.html" class="pure-menu-link">Code</a></li>
+									<li class="pure-menu-item"><a href="hydro.html" class="pure-menu-link">Semi-Automated Hydroponics System</a></li>
+									<li class="pure-menu-item"><a href="3dprinter.html" class="pure-menu-link">3D Printer</a></li>
+							</ul>
+					</li>
+					<li class="pure-menu-item"><a href="links.html" class="pure-menu-link">Useful Resources</a></li>
+	        <li class="pure-menu-item"><a href="contact.html" class="pure-menu-link">Contact</a></li>
+	    </ul>
+		</div>
+
+		<div class="pure-g">
+				<div class="pure-u-1 pure-u-md-1-2">
+					<div class=" headermain">
+						<img class="pure-img headshot" src="images/Rohilhead.jpg" alt="Me!">
+						<h1 class="splash-head">Rohil Parikh</h1>
+						<hr class="homehr">
+						<p class="splash-subhead">
+								Welcome to my website! I am currently a master’s student at University of Southern California studying electrical engineering.
+								My interests include leveraging novel semiconductor materials for improved switching and photonic devices.
+								My current research involves using semiconductors devices for in neuromorphic computing applications.
+						</p>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2">
+					<div class="l-box headermain">
+						<h1 class="splash-head">About The Site</h1>
+						<hr class="homehr">
+						<p class="splash-subhead">
+							The home page of this website contains an interactive version of my resume. In the navigation bar above you can
+							see non-academic projects, as well as some links that I have found helpful during my undergrad and postgrad
+							studies. Some of these projects are complete while others are being updated as I make progress. If you have
+							any questions on any of the projects, feel free to contact me using the contact page.
+						</p>
+						<p class="splash-subhead">
+							This website was made using HTML5, <a href="https://purecss.io/">Pure CSS</a> and JavaScript.
+						</p>
+					</div>
+				</div>
+				<div class="pure-g tabs">
+					<div class="pure-u-1-3">
+						<button class="tablinks active" onclick="openTab(event, 'Experience')">Experience</button>
+					</div>
+					<div class="pure-u-1-3">
+				  	<button class="tablinks" onclick="openTab(event, 'Research')">Research</button>
+					</div>
+					<div class="pure-u-1-3">
+				  	<button class="tablinks" type="submit" onclick="window.open('documents/Resume_RohilParikh.pdf')">Resume</button>
+					</div>
+				</div>
+		</div>
+
+		<div id="Experience" class="tabcontent" style="display: block">
+			<div class="tabtile">
+				<img class="pure-img tile" src="images/lehighlogo.png" alt="Lehigh Logo">
+				<h3> B.S. in Computer Engineering from Lehigh University</h3>
+					<p>The required courses for this degree include the fundamentals of electronic circuits,
+					signal theory, logic design, computer architecture, digital systems, structured programming, data structures,
+					software engineering, operating systems, and discrete mathematics.</p>
+			</div>
+			<div class="tabtile">
+				<img class="pure-img tile" src="images/usclogo.png" alt="USC Logo">
+				<h3> M.S. in Electrical Engineering from University of Southern California - In Progress</h3>
+						<p>Coures Completed: EE-508 Nano-Fabrication Lithography, EE-504L Solid State Processing and Integrated Circuits Laboratory,
+						EE-479 Analog Integrated Circuit Design, EE-537 Modern Solid-State Devices, EE-549 Nanotechnology for Materials, Electronics, and Circuits
+				</p>
+			</div>
+			<div class="tabtile">
+				<img class="pure-img tile" src="images/ppllogo.png" alt="PPL Logo">
+				<h3>PPL Electric Utilities</h3>
+				<p> During my time at PPL I worked in the distribution operations center. I had three different jobs over the course of my internship.
+					My first job was to use Python and Django to create a web service. The service pulled raw data from distribution centers across the
+					PPL territory. The data was cleaned and presented in a way that allowed the user to see large scale trends across the territory.
+					The second job was to work with IOT team to assess the feasibility and necessity of placing IOT sensors in various distribution boxes
+					(the large grey boxes seen on some utility poles) across the territory. The last role was to work with distributions
+					operation operators to learn the general operations they perform in daily tasks. Using the information, I learned I
+					 created a program to automated testing scenarios for incoming operators.
+				</p>
+			</div>
+			<div class="tabtile">
+				<img class="pure-img tile" src="images/exscribelogo.png" alt="Exscribe Logo">
+				<h3>Exscribe</h3>
+				<p> Working with two other interns we first created a way for users to fill out medical questionnaire forms safely and securely online.
+					We began by constructing a backend scheme using C#. The backend needed to store incoming data synchronously and interface with preexisting
+					code to pull previously entered user data. To reduce the size of the forms we had to develop an algorithm that look at prior medical history
+					and the type of operation to only ask pertinent questions. We then developed a user interface that would work on all devices.
+				</p>
+			</div>
+			<div class="tabtile">
+				<img class="pure-img tile" src="images/idtechlogo.png" alt="iD Tech Logo">
+				<h3>iD Tech Camps</h3>
+				<p> Taught courses in Cryptography and Cyber security and Intro to Game Design to high school and middle school students.
+					The Cryptography and Cyber security course contained basic encryption and decryption, using python to create various
+					programs to further protect the ciphertext while it is in transit, and how to analyze small programs for security.
+					The Intro to Game used Construct 2 and RPG Maker to introduce the basic concepts of game design and allow students to
+					create a fully functioning game by the end of the course.
+				</p>
+			</div>
+		</div>
+
+		<div id="Research" class="tabcontent">
+			<div class="tabtile">
+				<img class="pure-img tile" src="images/usclogo.png" alt="USC Logo">
+				<h3>Kapadia lab - Laboratory for Photons, Electrons and Materials</h3>
+				<p>I work on materials growth of III-V semiconductor devices using templated liquid phase growth and MOCVD.
+					My current research involves using transistors fabricated by the lab to produce neuromorphic computing arrays.
+					These arrays can be used to emulate artificial neural networks and are more efficient than traditional von-Neumann methods.
+					The transistors use a photosensitive material along with a charge trapping layer to modulate conductance.
+			  </p>
+			</div>
+			<div class="tabtile">
+				<img class="pure-img tile" src="images/lehighlogo.png" alt="Lehigh Logo">
+				<h3>Cheng lab - Laboratory Of Networking Group</h3>
+				<p> In Dr. Cheng’s lab I worked with code that can be used to secure programable logic controllers (PLCs) at the firmware level.
+					Attackers waning to disrupt a resource can easily can code being sent to PLCs. By storing legitimate runtime behavior in the
+					firmware of each PLC most types of nondestructive attacks can be mitigated. After the general firmware had been written I worked
+					on documenting the setup and procedures needed to place the ladder logic code into PLCs.
+				</p>
+			</div>
+			<div class="tabtile">
+				<img class="pure-img tile" src="images/lehighlogo.png" alt="Lehigh Logo">
+				<h3>Miwa lab - The Lynx Lab</h3>
+				<p> In Dr. Miwa's neuroscience lab, I worked on a wide variety of projects. I developed a website to secure participants for a study on the effects of lynx gene mutations.
+					I learned PCR and gel electrophoresis to analyze saliva samples collected from the participants of the study.
+					I computerized the study to allow for the test to be administered online, as well as, as helping to administer the study.
+					I ran statistical analysis on results received from study to determine the effect of mutations on participants behavior.
+					Lasty, I worked on developing 3D models of the mutated gene to see potential effects of the mutations discovered in participants. </p>
+			</div>
+		</div>
+
+		<div class="footer">
+				<p>
+					Copyright ©2020, Rohil Parikh  || <a href="https://www.privacypolicies.com/generic/">Privacy Policy</a> 
+				</p>
+		</div>
+
+		<script src="tabscript.js"></script>
+
+ 	</body>
+</html>

@@ -1,0 +1,483 @@
+/* Changing nav menu color*/
+.home-menu {
+    background: #1F1F1F;
+    padding: 0.5em;
+    opacity: .9;
+    z-index: 999;
+}
+
+/*change menu colors --> easier to see*/
+.pure-menu-link {
+    color: #d6d6d6;
+}
+
+.pure-menu-link:hover {
+    color: #111 !important;
+}
+
+pure-menu-selected>.pure-menu-link, .pure-menu-selected>.pure-menu-link:visited {
+    color: #777777;
+}
+
+/*setting my picture*/
+img.headshot {
+    max-width: 34%;
+    max-height: 39%;
+    border-radius: 24%;
+    margin-right: 1em;
+    float: left;
+}
+
+/*Changing home page */
+html,body {
+    background-color: #E6E6E4;
+    font-family: 'IBM Plex Serif', !important;
+    min-height: 100%;
+}
+
+/*changing 2 boxes on homepage*/
+.headermain{
+  margin-top: 7em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  border: 3px solid #535454;
+  background-color: #BABCAE;
+  padding: 1em 1em;
+  border-radius: 5px;
+  line-height: 1em;
+  overflow : auto;
+  box-shadow:  -1px 1px #535454,
+     -2px 2px #535454,
+     -3px 3px #535454,
+     -4px 4px #535454,
+     -5px 5px #535454;
+
+}
+
+/*boxes on non main pages*/
+.header{
+  margin-top: 5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  border: 3px solid #535454;
+  background-color: #BABCAE;
+  padding: 1em 1em;
+  border-radius: 5px;
+  line-height: 1em;
+  overflow : auto;
+  box-shadow:  -1px 1px #535454,
+     -2px 2px #535454,
+     -3px 3px #535454,
+     -4px 4px #535454,
+     -5px 5px #535454;
+
+}
+
+/* Main heading in header */
+.splash-head {
+    color: #535454 ;
+    letter-spacing: normal;
+    line-height: normal;
+}
+
+/* paragraph in header */
+.splash-subhead {
+    color: #535454 ;
+    letter-spacing: 0.05em;
+    text-transform: none;
+}
+
+/* line in header */
+hr.homehr {
+      height: 2px;
+      background-color: #535454;
+      border:none
+
+}
+
+/*tab styling*/
+.tabs{
+  overflow: hidden;
+  margin: auto;
+}
+
+/* Style the buttons inside the tab */
+.tabs button {
+  background-color: #BABCAE;
+  border-radius: 0.75em 0.75em 0em 0em;
+  border-color: #BABCAE;
+  margin-left: .1em;
+  padding: 14px 10px;
+  transition: 0.3s;
+  font-size: 14px;
+  border-bottom: solid 4px #59817B;
+  color: #535454;
+}
+/* Change background color of buttons on hover */
+.tabs button:hover {
+  color: #E6E6E4;
+  outline: none;
+}
+
+/* Create an active/current tablink class */
+.tabs button.active {
+  background-color: #59817B;
+  border-color: #59817B;
+  border-bottom: solid 4px #59817B;
+  outline: none;
+}
+
+/* make tab buttons home page responsive*/
+.tablinks{
+  border:1px solid gray;
+  border-radius:7%;
+  font-size:0.875;
+  word-wrap: break-word;
+  width: 100px; // only for IE8
+  max-width: 100%;
+}
+
+/*prevent tile images from breaking out of tile div*/
+.tabtile{
+  overflow:hidden;
+}
+
+/*size tile images and move to right*/
+.tile{
+  max-width: 15%;
+  float: right;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+  margin: auto;
+  width: 60%;
+  border: 3px solid #535454;
+  border-radius: 0.5em;
+  background-color: #BABCAE;
+  margin-bottom: 3em;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/*format all the tiles in tab menu*/
+.tabtile{
+  border: 3px solid #BABCAE;
+  border-radius: 0.5em;
+  background: #E6E6E4;
+  padding: 0.75em;
+  color: #535454;
+  font-size: 1em;
+  line-height: 1.33;
+  margin-bottom: 1em;
+}
+
+/* adding footer */
+.footer {
+  color: #535454;
+  font-size: 80%;
+  background-color: #E6E6E4;
+  height: 50px;
+  text-align: center;
+  clear: both;
+  position: relative;
+  height: 3em;
+  margin-top: 3em;
+}
+
+.tabpic{
+	max-width: 50%;
+    max-height: 50%;
+    align-content: center;
+}
+
+*:focus {
+  outline: 0;
+}
+
+/*on SEM page*/
+.container {
+  float:left;
+  padding-top:50px;
+  /*background-color: #005A97;
+  width:200px;
+  height:200px;
+  border-radius:0;
+  display:flex;
+  align-self: center;*/
+}
+
+/*sem buttons*/
+.SEMbuttons{
+  text-align: center;
+}
+
+.pure-button-primary, a.pure-button-primary {
+    background-color: #E6E6E4;/*BABCAE*/
+    color: #535454;
+    text-align: center;
+}
+
+/*sem Guides buttons*/
+.SEMguides{
+  margin-top: 2em;
+
+  text-align: center;
+}
+
+/* SEM guides*/
+.guides{
+  border:3px solid black;
+  margin: auto;
+}
+
+/* Style the buttons control guide selection */
+.SEMguides button {
+  background-color: #E6E6E4;
+  margin-left: .1em;
+  padding: 6px 7px;
+  transition: 0.3s;
+  font-size: 14px;
+  color: #535454;
+}
+
+/* Change background color of buttons on hover */
+.SEMguides button:hover {
+  color: #BABCAE;
+  outline: none;
+}
+
+/* Create an active/current tablink class */
+.SEMguides button.active {
+  background-color: #59817B;
+  color: #E6E6E4;
+  outline: none;
+}
+
+/*SEM images*/
+.SEMimages img{
+  width: 95%;
+  margin-top: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*SEM mods center*/
+.SEMmods{
+  text-align: center;
+}
+
+/*mod word color*/
+.mods{
+    color: #535454;
+}
+
+/*SEM mod box*/
+.modHeader{
+  margin-top: 1em;
+  border: 3px solid #535454;
+  background-color: #BABCAE;
+  padding: 1em 1em;
+  border-radius: 5px;
+  line-height: 1em;
+  box-shadow:  -1px 1px #535454,
+     -2px 2px #535454,
+     -3px 3px #535454,
+     -4px 4px #535454,
+     -5px 5px #535454;
+}
+
+/*center contact div*/
+.contactdiv{
+  margin: auto;
+
+}
+
+/*animated envelope contact me page*/
+.envelope {
+  position: relative;
+  align-self: center;
+  margin: 0 auto;
+  width: 100px;
+  height: 75px;
+  background-color: #94BDE5;
+}
+
+.wrap{
+  display: inline-block;
+  float: right;
+  margin-top: -.5em;
+
+}
+
+@media screen and (max-width: 350px) {
+    .wrap {
+        display: none !important;
+    }
+}
+
+
+.wrap:hover {
+  cursor: pointer;
+}
+
+.wrap:hover .moves {
+    transform: rotateX(180deg) translateY(50px);
+  -webkit-transform: rotateX(180deg) translateY(50px);
+  -ms-transform: rotateX(180deg) translateY(50px);
+    transition: .001s 0s;
+}
+
+.wrap:hover .letter {
+  z-index:40;
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+
+}
+
+.envelope-front {
+  width: 100px;
+  height: 75px;
+  background-color: #94BDE5;
+  position: absolute;
+  z-index:50;
+  -webkit-clip-path: polygon(50% 55%, 100% 1%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 55%, 100% 1%, 100% 100%, 0 100%, 0 0);
+}
+
+.envelope-flap {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 50px solid #6393BF;
+  position: absolute;
+}
+
+.envelope-flap.moves {
+  z-index:30;
+  transition: .001s .45s;
+}
+
+.letter {
+  height:60px;
+  width:75px;
+  display:block;
+  background-color:#ffffff;
+  position:absolute;
+  left:12.5px;
+  z-index:20;
+  transition: all .5s ease-in-out;
+}
+/* end contact envelope code*/
+
+/*Hydro main image*/
+.hydroimg{
+  max-width: 30%;
+  max-height: 30%;
+  padding: 2em 2em;
+  margin-right: 1em;
+  float: left;
+}
+
+/*hydro parts list*/
+.partslist{
+  margin-top: 1em;
+  color: #535454;
+      letter-spacing: 0.05em;
+      text-transform: none;
+
+}
+
+/*hydro data titles*/
+.hydrodata{
+  color: #535454;
+}
+
+/*3d printer main image*/
+.printerimg{
+  max-width: 20%;
+  margin-left: 1em;
+  margin-right: 2em;
+  float: left;
+}
+
+/*code cirles*/
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.single-chart {
+  width: 33%;
+  justify-content: space-around ;
+  margin: auto;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #ff9f00;
+}
+
+.circular-chart.green .circle {
+  stroke: #59817B;
+}
+
+.circular-chart.blue .circle {
+  stroke: #3c9ee5;
+}
+
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+/*code cirles*/
+
+/*heading for code circle*/
+.single-chart p{
+  text-align: center;
+  font-size: 2vw;
+  color: #535454;
+}
