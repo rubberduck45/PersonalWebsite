@@ -43,26 +43,26 @@
 					<br>
 						<hr class="homehr">
 						<p class="splash-subhead">
-								<form class="pure-form pure-form-aligned">
+								<form class="pure-form pure-form-aligned" method="POST" action="send_script.php">
 								    <fieldset>
 								        <div class="pure-control-group">
 								            <label for="aligned-name">Name</label>
-								            <input type="text" id="aligned-name" placeholder="Name" required=""/>
+								            <input type="text" id="aligned-name" placeholder="Name" required=""  name="name"/>
 								        </div>
 								        <div class="pure-control-group">
 								            <label for="aligned-email">Email</label>
-								            <input type="email" id="aligned-email" placeholder="Email" required=""/>
+								            <input type="email" id="aligned-email" placeholder="Email" required=""  name="email"/>
 								        </div>
 								        <div class="pure-control-group">
 								            <label for="aligned-subject">Subject</label>
-								            <input type="text" id="aligned-subject" placeholder="Subject" required="" />
+								            <input type="text" id="aligned-subject" placeholder="Subject" required="" name="subject"/>
 								        </div>
 								        <div class="pure-control-group">
 								            <label for="aligned-message">Message</label>
-														<textarea class="pure-input-1-2" id="aligned-message" placeholder="Enter your message here..." required=""></textarea>
+														<textarea class="pure-input-1-2" id="aligned-message" placeholder="Enter your message here..." required="" name="msg"></textarea>
 								        </div>
 								        <div class="pure-controls">
-								            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+								            <button type="submit" class="pure-button pure-button-primary" name="send_message_btn">Submit</button>
 								        </div>
 								    </fieldset>
 								</form>
@@ -70,14 +70,6 @@
 					</div>
 				</div>
 		</div>
-
-		<!--div class="footer">
-				<p>
-					Copyright �2020, Rohil Parikh  || <a href="https://www.privacypolicies.com/generic/">Privacy Policy</a> || Contact: rohilparikh@gmail.com
-				</p>
-		</div-->
-
 		<script src="tabscript.js"></script>
-
  	</body>
 </html>
